@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+
+
+
+@layer components {
+  * {
+    @apply font-[Relaway,sans-serif] text-[18px];
+
+  }
+}
+
+
+
+@layer utilities {
+ .isBorder {
+    @apply border-[2px] text-[22px] border-solid rounded-[50%] p-2 px-3 text-black transition-colors duration-150 hover:border-[#34b7a7];
+  }
+
+  .isBorder:hover .icon{
+    @apply text-[#34b7a7];
+  }
+
+  .icon {
+    @apply text-[100%] cursor-pointer text-black transition-colors duration-150 hover:text-[#34b7a7];
+  }
+
+  .nav-active {
+    @apply text-[#34b7a7] relative p-2.5;
+  }
+
+  .nav-active::before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    background-color: #34b7a7;
+    width: 30px;
+    height: 2px;
+    border-radius: 1px;
+  }
+
+  .nav::before {
+    content: '';
+    position: absolute;
+    bottom: 0px; 
+    width: 0;
+    left: 10px;
+    background-color: #34b7a7;
+    height: 2px;
+    border-radius: 1px;
+    transition: width 0.4s;
+  }
+
+
+  .nav {
+    @apply p-2.5 relative text-black transition-colors duration-400;
+  }
+  
+  .nav:hover {
+    @apply text-[#34b7a7];
+  }
+  
+  .nav:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    width: 30px;
+    left: 10px;
+    background-color: #34b7a7;
+    height: 2px;
+    border-radius: 1px;
+  } 
+} 
+
+
+
