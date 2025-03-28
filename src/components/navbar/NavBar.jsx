@@ -4,8 +4,8 @@ import SocialIcon from "../socialIcon/SocialIcon";
 
 function NavBar() {
   return (
-    <nav className="flex justify-between items-center w-[100%] h-[80px] bg-gray-200 px-[50px] fixed top-0 shadow">
-      <div className="font-[Raleway,sans-serif] text-3xl font-[300]">OMUR</div>
+    <nav className="flex justify-between items-center w-[100%] h-[80px] bg-gray-200 px-[50px] fixed top-0 shadow z-10">
+      <div className="font-[Raleway,sans-serif] text-2xl font-[300]">OMUR</div>
 
       <ul className="flex justify-between items-center gap-2.5">
         <li>

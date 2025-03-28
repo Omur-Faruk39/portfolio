@@ -53,7 +53,7 @@
 
 
   .nav {
-    @apply p-2.5 relative text-black transition-colors duration-400;
+    @apply p-2.5 relative text-black duration-400 text-[16px] transition-all;
   }
   
   .nav:hover {
@@ -69,7 +69,24 @@
     background-color: #34b7a7;
     height: 2px;
     border-radius: 1px;
-  } 
+  }
+
+  .fade-out {
+    animation: fade-out 0.7s forwards;
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 0;
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+ 
+    } 
+  }
+ 
 } 
 
 
