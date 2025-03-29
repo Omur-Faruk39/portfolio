@@ -11,7 +11,7 @@ import About from "./components/about/About";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/portfolio/" element={<Root />}>
+      <Route path="/" element={<Root />}>
         <Route path="" element={<Home />} />
         <Route path="about" element={<About />} />
       </Route>

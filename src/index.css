@@ -87,7 +87,40 @@
     } 
   }
  
+
+  .about-heading {
+    @apply text-center font-[600] text-[32px] relative inline mb-10;
+  }
+
+  .about-heading::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%);  
+    width: 50px;
+    background-color: #34b7a7;
+    height: 3px;
+    border-radius: 1px;
+
+  }
+
+
+  .about-me {
+    @apply text-[16px] font-[400] mb-5 opacity-80 ml-2.5;
+  }
+
+  .about-me::before {
+    content: '>';
+    color: #34b7a7;
+    position: relative;
+    left: -10px;
+    font-size: 20px;
+    top: 1px;
+  }
+
 } 
+
 
 
 
