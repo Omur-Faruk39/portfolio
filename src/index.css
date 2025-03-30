@@ -1,22 +1,17 @@
-@import 'tailwindcss';
-
-
+@import "tailwindcss";
 
 @layer components {
   * {
     @apply font-[Relaway,sans-serif] text-[18px];
-
   }
 }
 
-
-
 @layer utilities {
- .isBorder {
+  .isBorder {
     @apply border-[2px] text-[22px] border-solid rounded-[50%] p-2 px-3 text-black transition-colors duration-150 hover:border-[#34b7a7];
   }
 
-  .isBorder:hover .icon{
+  .isBorder:hover .icon {
     @apply text-[#34b7a7];
   }
 
@@ -29,7 +24,7 @@
   }
 
   .nav-active::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0px;
     left: 10px;
@@ -40,9 +35,9 @@
   }
 
   .nav::before {
-    content: '';
+    content: "";
     position: absolute;
-    bottom: 0px; 
+    bottom: 0px;
     width: 0;
     left: 10px;
     background-color: #34b7a7;
@@ -51,17 +46,16 @@
     transition: width 0.4s;
   }
 
-
   .nav {
     @apply p-2.5 relative text-black duration-400 text-[16px] transition-all;
   }
-  
+
   .nav:hover {
     @apply text-[#34b7a7];
   }
-  
+
   .nav:hover::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0px;
     width: 30px;
@@ -83,35 +77,31 @@
     100% {
       transform: scale(1);
       opacity: 1;
- 
-    } 
+    }
   }
- 
 
   .about-heading {
     @apply text-center font-[600] text-[32px] relative inline mb-10;
   }
 
   .about-heading::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -15px;
     left: 50%;
-    transform: translate(-50%);  
+    transform: translate(-50%);
     width: 50px;
     background-color: #34b7a7;
     height: 3px;
     border-radius: 1px;
-
   }
-
 
   .about-me {
     @apply text-[16px] font-[400] mb-5 opacity-80 ml-2.5;
   }
 
   .about-me::before {
-    content: '>';
+    content: ">";
     color: #34b7a7;
     position: relative;
     left: -10px;
@@ -119,8 +109,23 @@
     top: 1px;
   }
 
-} 
+  .about-me-section {
+    opacity: 0;
+    animation: about-me-section 1s forwards;
+  }
 
+  @keyframes about-me-section {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
 
-
-
+  .progress-bar {
+    @apply bg-[#34b7a7] h-2 transition-all duration-500 ease-in-out;
+  }
+}
