@@ -116,7 +116,7 @@ function About() {
           </p>
         </div>
 
-        {/* <div>
+        <div>
           <div>
             <p>
               <span>HTML</span> <i>{skillObject.html}%</i>
@@ -128,7 +128,7 @@ function About() {
               ></div>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
