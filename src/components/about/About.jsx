@@ -1,28 +1,54 @@
 import React, { useEffect } from "react";
 import image from "./../../assets/profile-img.jpg";
 import scrollToSkills from "../../helpers/scrollHalper.js";
+import Skill from "./Skill.jsx";
 
 const skillObject = {
-  html: 100,
-  css: 90,
-  javascript: 80,
-  react: 70,
-  node: 40,
-  express: 0,
+  html: {
+    name: "HTML",
+    value: 100,
+  },
+  css: {
+    name: "CSS",
+    value: 90,
+  },
+  javascript: {
+    name: "JavaScript",
+    value: 80,
+  },
+  react: {
+    name: "React",
+    value: 70,
+  },
+  node: {
+    name: "Node JS",
+    value: 40,
+  },
+  express: {
+    name: "Express JS",
+    value: 20,
+  },
+  mongodb: {
+    name: "MongoDB",
+    value: 50,
+  },
+  tailwind: {
+    name: "Tailwind CSS",
+    value: 80,
+  },
 };
 
 function About() {
   const skillsHeading = React.useRef(null);
-  const [Skills, setSkills] = React.useState({
-    heading: false,
-    skill1: false,
-  });
+  const skillsBodyRef = React.useRef(null);
+  const [SkillsHeading, setSkillsHeading] = React.useState(false);
+  const [SkillsBody, setSkillsBody] = React.useState(false);
 
   useEffect(() => {
     let observer = null;
 
-    if (!Skills.heading) {
-      observer = scrollToSkills(skillsHeading, setSkills);
+    if (!SkillsHeading) {
+      observer = scrollToSkills(skillsHeading, setSkillsHeading);
     }
 
     return () => {
@@ -30,7 +56,21 @@ function About() {
         observer();
       }
     };
-  }, [skillsHeading, Skills, setSkills]);
+  }, [skillsHeading, SkillsHeading, setSkillsHeading]);
+
+  useEffect(() => {
+    let observer = null;
+
+    if (!SkillsBody) {
+      observer = scrollToSkills(skillsBodyRef, setSkillsBody);
+    }
+
+    return () => {
+      if (observer && observer) {
+        observer();
+      }
+    };
+  }, [skillsHeading, SkillsBody, setSkillsBody]);
 
   return (
     <div className="mt-[138px]">
@@ -104,9 +144,9 @@ function About() {
         </div>
       </div>
 
-      <div>
+      <div className="mb-[138px]">
         <div
-          className="flex justify-center items-center flex-col mb-12 mt-20"
+          className="flex justify-center items-center flex-col mt-20 opacity-0"
           ref={skillsHeading}
         >
           <h1 className="about-heading">Skills</h1>
@@ -116,17 +156,22 @@ function About() {
           </p>
         </div>
 
-        <div>
+        <div
+          className="grid grid-cols-2 gap-10 mx-10 opacity-0"
+          ref={skillsBodyRef}
+        >
           <div>
-            <p>
-              <span>HTML</span> <i>{skillObject.html}%</i>
-            </p>
-            <div className="w-[200px] border-black border-2">
-              <div
-                style={{ width: `${skillObject.node * 2}px` }}
-                className="progress-bar"
-              ></div>
-            </div>
+            <Skill SkillsBody={SkillsBody} subject={skillObject.html} />
+            <Skill SkillsBody={SkillsBody} subject={skillObject.css} />
+            <Skill SkillsBody={SkillsBody} subject={skillObject.tailwind} />
+            <Skill SkillsBody={SkillsBody} subject={skillObject.javascript} />
+          </div>
+
+          <div>
+            <Skill SkillsBody={SkillsBody} subject={skillObject.react} />
+            <Skill SkillsBody={SkillsBody} subject={skillObject.node} />
+            <Skill SkillsBody={SkillsBody} subject={skillObject.express} />
+            <Skill SkillsBody={SkillsBody} subject={skillObject.mongodb} />
           </div>
         </div>
       </div>
