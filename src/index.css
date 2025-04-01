@@ -136,7 +136,7 @@
   .facts-bar::before {
     content: "";
     position: absolute;
-    top: 50px;
+    top: 70px;
     left: 50%;
     transform: translate(-50%);
     width: 20px;

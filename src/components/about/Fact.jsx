@@ -55,7 +55,7 @@ function Fact() {
       >
         <div className="flex flex-col justify-center items-center relative">
           <span
-            className="purecounter h-8 w-40 text-2xl font-bold text-center mb-6"
+            className="purecounter h-12 w-40 text-5xl font-bold text-center mb-6"
             data-purecounter-start="0"
             data-purecounter-end="521"
             data-purecounter-duration="1"
@@ -65,7 +65,7 @@ function Fact() {
 
         <div className="flex flex-col justify-center items-center relative">
           <span
-            className="purecounter h-8 w-40 text-2xl font-bold text-center mb-6"
+            className="purecounter h-12 w-40 text-5xl font-bold text-center mb-6"
             data-purecounter-start="0"
             data-purecounter-end="232"
             data-purecounter-duration="1"
@@ -75,7 +75,7 @@ function Fact() {
 
         <div className="flex flex-col justify-center items-center relative">
           <span
-            className="purecounter h-8 w-40 text-2xl font-bold text-center mb-6"
+            className="purecounter h-12 w-40 text-5xl font-bold text-center mb-6"
             data-purecounter-start="0"
             data-purecounter-end="1453"
             data-purecounter-duration="1"
@@ -87,7 +87,7 @@ function Fact() {
 
         <div className="flex flex-col justify-center items-center relative">
           <span
-            className="purecounter h-8 w-40 text-2xl font-bold text-center mb-6"
+            className="purecounter h-12 w-40 text-5xl font-bold text-center mb-6"
             data-purecounter-start="0"
             data-purecounter-end="32"
             data-purecounter-duration="1"
