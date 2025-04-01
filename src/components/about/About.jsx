@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import image from "./../../assets/profile-img.jpg";
 import scrollToSkills from "../../helpers/scrollHalper.js";
 import Skill from "./Skill.jsx";
+import Fact from "./Fact.jsx";
 
 const skillObject = {
   html: {
@@ -144,7 +145,7 @@ function About() {
         </div>
       </div>
 
-      <div className="mb-[138px]">
+      <div className="mb-[70px]">
         <div
           className="flex justify-center items-center flex-col mt-20 opacity-0"
           ref={skillsHeading}
@@ -175,6 +176,8 @@ function About() {
           </div>
         </div>
       </div>
+
+      <Fact />
     </div>
   );
 }

@@ -132,4 +132,16 @@
     background-color: #34b7a7;
     height: 100%;
   }
+
+  .facts-bar::before {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 20px;
+    background-color: #34b7a7;
+    height: 3px;
+    border-radius: 1px;
+  }
 }
