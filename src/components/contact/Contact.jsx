@@ -12,15 +12,19 @@ function Contact() {
         consectetur velit
       </p>
       <div className="flex justify-center items-center gap-5 mt-10">
-        <div className=" shadow-[0_0_5px_rgba(0,0,0,0.2)] min-w-[450px] min-h-[500px]">
+        <div className=" shadow-[0_0_5px_rgba(0,0,0,0.2)] min-w-[450px] min-h-[500px] bg-white rounded-[10px]">
           <div className="m-6">
             <div>
               <div>
-                <FontAwesomeIcon icon={faLocationDot} />
-              </div>
-              <div>
-                <h1>Address</h1>
-                <p>Ranigonj, Goraghat, Dinajpur, Bangldesh</p>
+                <div className="flex">
+                  <div className="w-[50px] h-[50px] bg-[#F9F9F9] rounded-full flex justify-center items-center mr-5">
+                    <FontAwesomeIcon icon={faLocationDot} />
+                  </div>
+                  <div>
+                    <h1>Address</h1>
+                    <p>Ranigonj, Goraghat, Dinajpur, Bangldesh</p>
+                  </div>
+                </div>
               </div>
             </div>
             <iframe
