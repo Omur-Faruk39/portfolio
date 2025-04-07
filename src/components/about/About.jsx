@@ -3,6 +3,7 @@ import image from "./../../assets/profile-img.jpg";
 import scrollToSkills from "../../helpers/scrollHalper.js";
 import Skill from "./Skill.jsx";
 import Fact from "./Fact.jsx";
+import useScrollHandler from "../../lib/useScrollHandler.js";
 
 const skillObject = {
   html: {
@@ -44,6 +45,8 @@ function About() {
   const skillsBodyRef = React.useRef(null);
   const [SkillsHeading, setSkillsHeading] = React.useState(false);
   const [SkillsBody, setSkillsBody] = React.useState(false);
+
+  useScrollHandler();
 
   useEffect(() => {
     let observer = null;

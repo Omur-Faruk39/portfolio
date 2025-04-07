@@ -1,8 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router";
 import bgImage from "../../assets/hero-bg.jpg";
+import useScrollHandler from "../../lib/useScrollHandler";
 
 function Home() {
+  useScrollHandler();
 
   return (
     <main
@@ -10,7 +12,9 @@ function Home() {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="flex items-center flex-col h-[100vh] justify-center gap-y-2.5 fade-out">
-        <h1 className={`text-black font-[Raleway,sans-serif] font-[700] text-4xl`} >
+        <h1
+          className={`text-black font-[Raleway,sans-serif] font-[700] text-4xl`}
+        >
           OMUR FARUK
         </h1>
         <p className="text-black font-[Raleway,sans-serif] font-[500]">

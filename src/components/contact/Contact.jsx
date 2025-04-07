@@ -1,8 +1,11 @@
+import useScrollHandler from "../../lib/useScrollHandler";
 import ContactCard from "./ContactCard";
 import Map from "./Map";
 import React, { useEffect } from "react";
 
 function Contact() {
+  useScrollHandler();
+
   useEffect(() => {
     document.body.style.backgroundColor = "#F9F9F9";
     document.body.style.width = window.innerWidth + "px";

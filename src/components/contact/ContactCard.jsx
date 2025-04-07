@@ -39,10 +39,7 @@ function ContactCard() {
   };
 
   return (
-    <form
-      disabled="true"
-      className=" shadow-[0_0_5px_rgba(0,0,0,0.2)] max-w-[800px] min-w-[800px] min-h-[500px] bg-white rounded-[10px]"
-    >
+    <form className=" shadow-[0_0_5px_rgba(0,0,0,0.2)] max-w-[800px] min-w-[800px] min-h-[500px] bg-white rounded-[10px]">
       <div className="flex justify-center items-center mt-10 mb-10 gap-5">
         <div className="flex flex-col gap-5 w-[45%]">
           <label htmlFor="name">You Name</label>
@@ -63,7 +60,7 @@ function ContactCard() {
             type="email"
             onChange={changeHandler}
             id="email"
-            required
+            required="true"
             value={data.email}
             className="border border-solid border-[rgba(0,0,0,0.4)] rounded-[4px] w-[100%] h-[40px] px-2 py-2 focus:outline-none focus:border-[rgba(52,183,167,0.5)]"
           />
