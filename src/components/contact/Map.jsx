@@ -9,7 +9,7 @@ import {
 function map() {
   return (
     <>
-      <div className=" shadow-[0_0_5px_rgba(0,0,0,0.2)] min-w-[600px] min-h-[500px] bg-white rounded-[10px]">
+      <div className=" shadow-[0_0_5px_rgba(0,0,0,0.2)] min-w-[450px] min-h-[500px] bg-white rounded-[10px]">
         <div className="m-6">
           <div>
             <div>
